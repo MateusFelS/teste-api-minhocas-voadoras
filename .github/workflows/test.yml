@@ -25,4 +25,8 @@ jobs:
         run: npm install
 
       - name: Run Cypress tests
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+          MANAGEMENT_TOKEN: ${{ secrets.MANAGEMENT_TOKEN }}
+          INVALID_TOKEN: ${{ secrets.INVALID_TOKEN }}
         run: npx cypress run
