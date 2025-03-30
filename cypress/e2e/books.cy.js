@@ -2,7 +2,7 @@ const BASE_URL = Cypress.env('BASE_URL');
 const MANAGEMENT_TOKEN = Cypress.env('MANAGEMENT_TOKEN');
 const INVALID_TOKEN = Cypress.env('INVALID_TOKEN');
 
-describe('Contentful API - Livros', () => {
+describe('API - Livros', () => {
     let entryId; 
 
     it('Deve obter a lista de livros', () => {
@@ -62,7 +62,7 @@ describe('Contentful API - Livros', () => {
     });
 });
 
-describe('Contentful API - Testes Negativos - Livros', () => {
+describe('API - Testes Negativos - Livros', () => {
     it('Não deve obter a lista de livros sem token de autenticação', () => {
       cy.request({
         method: 'GET',
