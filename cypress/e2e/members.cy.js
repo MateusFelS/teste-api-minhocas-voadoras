@@ -2,7 +2,7 @@ const BASE_URL = Cypress.env('BASE_URL');
 const MANAGEMENT_TOKEN = Cypress.env('MANAGEMENT_TOKEN');
 const INVALID_TOKEN = Cypress.env('INVALID_TOKEN');
 
-describe('Contentful API - Equipe', () => {
+describe('API - Equipe', () => {
   let entryId; 
 
   it('Deve obter a lista de membros da equipe', () => {
@@ -59,7 +59,7 @@ describe('Contentful API - Equipe', () => {
   });
 });
 
-describe('Contentful API - Testes Negativos', () => {
+describe('API - Testes Negativos', () => {
   it('Não deve obter membros da equipe sem token de autenticação', () => {
     cy.request({
       method: 'GET',
